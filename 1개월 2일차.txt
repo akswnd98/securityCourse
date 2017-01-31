@@ -1,0 +1,51 @@
+와이어 샤크 사용법
+
+*패킷 덤프 파일
+	-.pcap, .pcapng
+
+화면 구성
+	-메뉴 바
+	-아이콘 바
+	
+	-패킷  리스트 뷰(Packet list view)
+	-패킷 디테일 뷰(Packet detail view)
+	-패킷 로우 뷰(Packet raw view)
+	
+	-전문가 정보
+	-파일명
+	-상태 뷰
+	-프로파일 뷰
+
+와이어 샤크가 제공하는 필터링 기능
+	1.캡쳐 필터
+		-패킷을 캡쳐할 때 적용되는 룰
+		-복잡한 룰을 적용하지 않는게 좋다.
+		캡쳐할 때 부하가 걸릴 수 있음.
+
+	2.디스플레이 필터
+		-패킷을 캡쳐한 이후에 적용되는 룰.
+		-아주 복잡한 룰도 적용 가능.
+		-적용할 수  있는 룰도 많음.
+		단 multicast룰만 불가능. 즉 멀티케스트 ip대역을 차단해서 사용해야됨.
+		
+
+1. UDP 통신을 하는 응용 프로토콜
+	-DHCP(Dynamic Host Configuration Protocol)
+	-DNS(Domain Name System)
+	-TFTP(FTP의 UDP버전)
+
+2. TCP 통신을 하는 응용 프로토콜
+	-FTP(File Transfer Protocol) - TCP 사용
+	-HTTP(Hyper Text Transfer Protocol)(WEB)
+	-SMTP(Simmple Mail Transfer Protocol)(MAIL)
+		 ^	
+	                     ^^
+		|||
+		|||
+	                   표준
+
+DHCP(Dynamic Host Configuration Protocol)
+	-네트워크를 알지 못해도 통신이 가능.
+	-가상머신을 통해서(리눅스) DHCP 서버를 구축.
+	-서버를 구축한다 -> 서비스를 제공.
+

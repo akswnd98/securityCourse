@@ -1,0 +1,26 @@
+DNS
+
+1. DNS Spoofing(DNS Cache poisonning)
+	-DNS를 속임.
+	-udp port를 추측.
+	-birthday attack
+		-transaction id를 추즉하는 기법.
+		-범위를 줄여서 많이 시도해서 확률을 높임.
+
+	-client 상대로는 arp spoofing을 먼저해서 transaction id를 스니핑해서 암.
+	
+
+2. fishing
+	-www.daun.net -> 오타 유도
+
+DNS Header
+	1. transaction id (2)
+	2. flag (2)
+	3. question (2): 질의 개수(한번의 여러개의 도매인을 질의 할 수도 있음.).
+	4. answer RRs (2): 필드의 개수.
+	5. authority RRs (2): 필드의 개수
+	6. additional RRs (2): 필드의 개수
+	7. queries:
+	8. answers:
+	9. authority:
+	10. additional:

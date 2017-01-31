@@ -1,0 +1,25 @@
+가짜 응답 페이지의 크기
+
+eth (14) + ip (20) + udp (8) + DNS (12) + query (19) + answer (16) -> 89byte
+
+query
+	domain name (15)
+	type (2)
+	class (2)
+
+answer
+	domain name (2) (pointer 이용)
+	type (2)
+	class (2)
+	TTL (4)
+	data length (2): 4
+	ip address (4): 192.168.3.xxx
+
+UDP: dhcp, dns
+
+TCP:
+	-TCP SYN Flooding (DDOS)
+	-FTP
+	-HTTP
+	-MAIL (SMTP프로토콜 사용)
+

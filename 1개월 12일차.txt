@@ -1,0 +1,47 @@
+HTTP
+
+status-line
+	HTTP version sp status code sp reason phrase\r\n ex) HTTP/1.1 200 OK
+
+*body가 있는 경우 content-type헤더와 content-length헤더가 꼭 있어야 함.
+*header의 끝에 0x0d0a가 와야함. header list의 끝에도 0x0d0a가 와야함.
+*Host header must be followed after GET method.
+
+*NetCat
+	-telnet과 유사한 프로그램
+	-tcp통신을 할 수 있는 프로그램
+	1. for linux
+		-nmap <- 마스터 패키지
+		-ncat <- 프로그램
+	
+	2. for windows
+		-nc.exe <- 프로그램
+
+DDOS
+	-GET Flooding
+		대량의 GET패킷을 보냄.
+	
+	-CC Attack: CC헤더에 케시 설정을 하지 않음. -> 모든 패킷이 클라이언트 측 케싱없이 다 도달한다.
+	*CC: Cache-Control header
+
+
+	-slow attack
+
+	<slow attack>
+
+1) slowloris attack
+	-헤더의 끝을 포함하지 않은 상태로 요청.
+	-서버는 헤더가 아직 도착하지 않았다고 관주 ->
+	세션을 계속 맺음.
+	-웹 서버는 이런 경우 60초안에 다음 헤더가 도착하지 않으면
+	세션 종료 코드인 Bad Request를 보내므로 그 안에 추가적인 헤더를
+	보내주면 된다.
+
+2) slow read attack
+	-메세지 바디를 이용한 공격기법
+	-Content-Type: text/html
+	-Content-Length를 한 100000으로 해놓고
+	헤더를 종료시키고 문자 하나 까지 보낸다.
+	그리고 50초에 한번씩 문자 하나씩 보낸다.
+	총 578일이 걸린다.
+

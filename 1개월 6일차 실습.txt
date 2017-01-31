@@ -1,0 +1,16 @@
+1. ARP spoofing (pcap lib 이용)
+	1) arp cache poisonning.
+	2) packet forwarding.
+	*ARP request 메세지를 작성하여 스푸핑
+	*대신 상대방의 mac주소를 알고 있는 상태이므로 유니케스팅으로 할 수 있다.
+
+target: 
+
+attacker: 192.168.3.214, 90-9f-33-eb-3b-a5
+
+2. DNS spoofing (pcap lib 이용)
+	1) DNS Query 패킷을 모니터링.
+	2) 타겟 도메인(www.daum.net) 모니터링.
+	3) 속이려고 하는 도메인에 대한 DNS 쿼리.
+	패킷이 검출되면 가짜 응답을 만들어서 전송.
+		출발지 포트번호와 TRX id 정보를 알아야 한다.

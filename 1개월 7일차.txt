@@ -1,0 +1,6 @@
+제어판 -> 시스템 및 보안 -> 관리 도구 -> 서비스 -> Routing and Remote Access: 윈도우즈 라우팅(포워딩)
+
+birthday attack: 
+	transaction id가 1씩 증가함을 이용하여, 타겟에 dns를 보내서 transaction id를 흭득한 후 가능한 범위 안의 transaction id로
+	변조된 dns 패킷을 보낸다.
+

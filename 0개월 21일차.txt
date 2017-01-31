@@ -1,0 +1,40 @@
+TCP 헤더를 이용한 공격기법
+
+1) 스캐닝
+	-핵심 = Flag(SYN, FIN RST, ACK, ...)(3-way handshake)
+	즉 커넥트를 시도해봄.
+
+	1. fullScan
+		커넥트를 시도해봄.
+		커넥트가 되서 3-way handshake를 하면 오픈됨
+		아니면 클로우즈 됨.
+		
+		TCP 연결 흔적이 남는다.
+	
+	2. halfScan(stealthScan)
+		열려있는 포트에 대한 스캐닝 ->
+		a) 동기화 요청(SYN)
+		b) 서버에서 SYN-ACK로 응답 or 응답x
+		c) ACK로 응답을 보내는 것을 생략한다.
+		즉 세션이 맺어지지 않으며 기록이 남지 않는다.
+		패킷
+		^^^^^^^^^^^^^^^^^
+		위에 것이 SYN스켄
+
+		표준과는 다르게 거의 대부분 닫혀 있는
+		포트도 응답을 함. 그것을 이용 ->
+		-FIN SCAN, NULL SCAN, X-MAS SCAN, ...
+		(닫혀있는 포트에 대한 스캐닝 기법)
+
+		-SYN-ACK스켄(호스트 스캔)
+			-포트가 열려있는지 닫혀있는지 관계x
+			-호스트가 살아있다면 반드시 응답o
+			(방화벽이 막을 수 없음.)
+	
+2) DDos
+	-SYN Flooding
+	
+*TCP헤더와 UDP헤더의 체크섬 계산법
+srcIp + dstIp + zero + L4type + tcpSegmentLen + tcpHeader + tcpData
+
+srcIp + dstIp + zer9 + L4type + udpSegmentLen + udpHeader + udpData

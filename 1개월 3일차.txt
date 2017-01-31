@@ -1,0 +1,30 @@
+DHCP 서버 프로그램 설치
+
+DHCP 서버 설정
+	-/etc/dhcp/*
+		dhcpd.conf -> 설정 파일
+
+	-/var/lib/dhcpd/dhcpd.leases -> ip의 점유 상황
+
+1. 클라이언트: IP임대를 요청함.
+	요청하는 타이밍:
+		1)컴퓨터를 처음 켰을 때.
+		2)임대시간이 만료가 되었을 때.
+		3)최대 임대시간이 만료가 되었을 때.
+
+2. DHCP Message 타입
+	1)DHCP Discover: 컴퓨터를 처음 켰을 때.
+		브로드 캐스팅으로 DHCP할당을 요청함.
+
+	2)DHCP Offer: DHCP서버가 자신의 lease(임대)목록중 없는 
+		ip주소를 Client에 보내줌.
+
+	3)DHCP Request: Client가 네트워크 내의 모든 호스트에
+		자신이 할당 받은 ip는 자신의 것이라고 선언.
+
+	4)DHCP ACK: DHCP서버가 자신의 Client에 확실히 ip를 할당함.
+
+*Boot Protocol이란: DHCP의 전판 프로토콜.
+
+DHCP 서버가 게이트웨이 ip를 자신의 ip로 전달 하면 스니핑이 됨.
+

@@ -1,0 +1,4 @@
+tcp SYN Flooding:
+	tcp 세션을 반만 열어놓아 서버가 SYN SENT 상태에서 머무르게 한다.
+	그런 세션을 여러개 만들어 놓음.
+	ip spoofing을 하여 한 컴퓨터에서 여러 ip 패킷을 보냄.

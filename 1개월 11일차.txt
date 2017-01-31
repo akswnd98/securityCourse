@@ -1,0 +1,55 @@
+TCP
+	-FTP
+	-HTTP
+
+HTTP(Hypher Text Transfer Protocol)
+	-웹(web) 통신에서 사용되는 프로토콜.
+	
+웹
+	1) 네트워크 수준 이해.
+	2) 웹 어플리케이션 수준 이해.
+	2가지 모두 필요.
+
+	<HTTP 메시지 구조>
+
+start-line\r\n
+header-field1\r\n ex) header-name: header-value; header-value;...\r\n
+header-field2\r\n ex) header-name: header-value; header-value;...\r\n
+...
+\r\n
+message-body
+
+1) HTTP Request Message.
+	Request-line\r\n
+	Request-header\r\n ex) header-name: header-value; header-value;...\r\n
+	...
+	\r\n
+	message-body
+
+2) HTTP Response Message.
+	status-line\r\n
+	status-header\r\n ex) header-name: header-value; header-value;...\r\n
+	...
+	\r\n
+	message-body
+
+1.1) Request-line
+	method sp URI(URL) sp HTTP version\r\n
+	*sp = space
+
+2.1) status-line
+	HTTP version sp status code sp reason phrase\r\n
+	*sp = space
+
+1.1.1) method: GET, HEAD, POST, PUT...
+	GET과 POST의 차이는 php책 참고.
+	위키백과 http ㄱㄱ.
+
+*URI(Uniformed Resource Identifier) -> 식별자 ex) www.naver.com/3608
+*URL(Uniformed Resource Location) -> 위치 ex) www.naver.com/webtoon/list.php
+
+*Request와 Response 사이에는 start-line의 형태와 header-field의 종류에 차이점이 있다.
+*header-field는 둘에게 공통일 수도, 아닐 수도 있다.
+
+*케리지 리턴: /r 해당 라인의 끝, /n 계행.
+*CRLF = 케리지 리턴.

@@ -1,0 +1,63 @@
+FTP(File Transfer Protocol)
+	-FTP command
+
+*FTP 사용자
+
+1) 리눅스 사용자
+	-리눅스의 사용자와 FTP의 사용자는 동일.
+	-FTP 서비스를 사용하려면 리눅스 시스템에
+	사용자 계정이 있어야 한다.
+
+	-ftp의 홈 디렉터리: 사용자의 홈 디렉터리.
+
+2) 익명 사용자
+	-anonymous계정.
+	-패스워드 없이 FTP 서버에 접속이 가능.
+	
+	-ftp의 홈 디렉터리: /var/ftp
+
+*ftp client는 cmd ftp명령어도 제공하며, 인터넷 브라우저도 제공한다.
+
+*ftp가 데이터를 송/수신 하는 방법
+
+1) activeMode(능동모드)
+	port: 21
+		-로그인 인증
+		-FTP Command 전달
+
+	port: 20 (ftpDataPort)
+		-파일 송/수신
+
+	---> 클라이언트가 PORT라는 FTP Command를 통하여
+	데이터를 받는 서버의 ip와 port번호를 ','로 구분하여 전달.
+	ex) PORT 192,168,3,141,17,177\r\n
+	( port 번호 해석 ) 17 * 256 + 177
+	
+	--->LIST\r\n
+
+2) passiveMode(수동모드)
+	port: 21
+		-로그인 인증
+		-FTP Command 전달
+	
+	port: 1024 ~ 65535
+
+	--->PASV\r\n
+	227 Entering Passive Mode (192,168,3,141,74,86).
+	
+	즉 서버가 데이터를 받는 서버의 ip와 port번호를 알려 줌.
+
+	--->LIST\r\n
+
+*ftp는 로그인을 하는 클라이언트와 데이터를 송/수신하는 서버를 따로 둔다.
+
+*윈도우즈에서는 능동모드가 기본이자 필수.
+
+[잘못 알려진 상식]
+	-ftp 서버를 수동모드로 동작
+	-ftp 서버를 능동모드로 동작 하게 하려면
+	어떻게 해야 하나요?
+	-즉 ftp 서버가 모드를 결정 하지 않음, 클라이언트가 결정
+
+ftpBounceAttack(ftpBounceScan):
+	옛날에 정말로 login pc와 data pc분리가 가능 했을 때, 내부망의 ip나 port를 스캔하는 방법. 

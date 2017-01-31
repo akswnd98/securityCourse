@@ -1,0 +1,22 @@
+도메인 설정
+	설정 도메인: ""
+
+	레코드(항목)
+		-SOA(Start Of Authority): 
+		-NS(Name Server): 네임서버의 주소
+		-A(Address): 해당 도메인에 대한 주소
+
+DNS 서버 위임
+1차 DNS: localdomain.com
+2차 DNS: 	
+	A.localdomain.com
+	B.localdomain.com
+	C.localdomain.com
+	D.localdomain.com
+
+3차 DNS:
+	88.A.localdomain.com
+	...
+	volley.C.localdomain.com
+	...
+
