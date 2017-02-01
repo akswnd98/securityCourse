@@ -1,0 +1,12 @@
+취약점 스캐너
+	-nessus scanner
+
+nessus:
+	컨트롤을 위해 웹서버를 구축하는 형식
+
+security onion:
+	kali리눅스랑 비슷한 리눅스.
+
+nikto:
+	nessus와 같은 취약점 스캐너
+
