@@ -1,0 +1,18 @@
+악플러의 공인 ip주소: 140.247.62.34
+악플러의 사설 ip주소1: 192.168.15.4
+악플러의 사설 ip주소2: 192.168.15.4
+라우터의 mac주소: 00:1d:d9:2e:4f:60
+악플러의mac주소: 00:17:f2:e2:c0:ce
+
+ip를 변조한 흔적은 없음.
+arp패킷에서 악플러의 mac주소와 사설 ip주소가 일치함.
+
+www.willselfdestruct.com: 69.25.94.22
+
+post로 www.willselfdestruct.com에 to, from, message같은 정보를 보냄.
+www.willselfdestruct.com이 message에 선생님에게 보냄.
+기록은 30초 만에 지워짐.
+
+nitroba.org: 84.200.227.131
+www.amazon.com: 72.21.210.11
+www.google.com: 74.125.19.103, 74.125.19.147, 74.125.19.104, 74.125.19.99
