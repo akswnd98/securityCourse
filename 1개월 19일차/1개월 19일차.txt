@@ -16,3 +16,9 @@ www.willselfdestruct.com이 message에 선생님에게 보냄.
 nitroba.org: 84.200.227.131
 www.amazon.com: 72.21.210.11
 www.google.com: 74.125.19.103, 74.125.19.147, 74.125.19.104, 74.125.19.99
+
+johnny coach
+
+<풀이>
+악플러의 ip = 192.168.15.4
+구글을 통해서 www.sendanonymousemail.net과 www.willselfdestruct.com에 접속.
